@@ -38,60 +38,11 @@ header{
     border-bottom: 1px solid #c7c7c7
 }
 
-/*-----------IMAGE SLIDER-----------*/
+footer {
+    background-color: var(--backgroundcolor-high-pink);
 
-.slider {
-    width: 100%;
-    height: 450px;
-    background-color: yellow;
-    margin: 0 auto;
-    text-align: center;
-    overflow: hidden;
-  }
-  .image-container {
-    width: 100%;
-    background-color: pink;
-    height: 450px;
-    clear: both;
-    position: relative;
-    -webkit-transition: left 2s;
-    -moz-transition: left 2s;
-    -o-transition: left 2s;
-    transition: left 2s;
-  }
-  .slide {
-    float: left;
-    margin: 0px;
-    padding: 0px;
-    position: relative;
-    width: 100%;
-    height: 450px;
-  }
-  #slide-1:target ~ .image-container {
-    left: 0px;
-  }
-  #slide-2:target ~ .image-container {
-    left: -1000px;
-  }
-  #slide-3:target ~ .image-container {
-    left: -2000px;
-  }
-  .buttons {
-    position: relative;
-    top: -0px;
-  }
-  .buttons a {
-    display: inline-block;
-    height: 10px;
-    width: 10px;
-    border-radius: 50px;
-    background-color: #a6a6a6;
-  }
-
-  .current-button{
-    background-color: white !important;
-  }
-
+    padding: 4em;
+}
 /*------------ANIMACIONES------------*/
 
 /*------------NAVBAR------------*/
@@ -186,6 +137,9 @@ header{
 
     transition: .4s;
 }
+
+/*-----------FOOTER----------*/
+
 
 /*------------RESPONSIVE DESIGN------------*/
 
