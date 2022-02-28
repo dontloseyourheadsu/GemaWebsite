@@ -41,8 +41,14 @@ header{
 footer {
     background-color: var(--backgroundcolor-high-pink);
 
-    padding: 4em;
+    padding: 2.5em 1em;
 }
+
+h3{
+    color: white;
+    margin-bottom: 0;
+}
+
 /*------------ANIMACIONES------------*/
 
 /*------------NAVBAR------------*/
@@ -140,6 +146,26 @@ footer {
 
 /*-----------FOOTER----------*/
 
+.footer-text{
+    color:white;
+}
+
+.footer-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.footer-contacto-align{
+    display: flex;
+    flex-direction: row;
+    margin:0;
+    padding:0;
+}
+
+.whatsapp-logo{
+    padding-left: 5px;
+}
 
 /*------------RESPONSIVE DESIGN------------*/
 
