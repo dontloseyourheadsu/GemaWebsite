@@ -1,7 +1,7 @@
 function burgerToggle(){
     let burger = document.querySelector('.burger');
     
-    burger.addEventListener("click",() => {
+    burger.addEventListener("click", () => {
         
         let line1 = document.querySelector('.line-1');
         let line2 = document.querySelector('.line-2');
@@ -40,10 +40,13 @@ function burgerToggle(){
     });    
 }
 
+function imageSlider(){
+    
+}
 
 //Functions call
-function tiempoDeSites(){
+function website(){
     burgerToggle();
 }
 
-tiempoDeSites();
+website();
