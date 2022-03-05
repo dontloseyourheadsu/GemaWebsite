@@ -1,3 +1,4 @@
+//-----------NAV FUNCTIONS-----------
 function burgerToggle(){
     let burger = document.querySelector('.burger');
     
@@ -40,13 +41,79 @@ function burgerToggle(){
     });    
 }
 
-function imageSlider(){
+burgerToggle();
+
+//-----------IMAGE SLIDER FUNCTIONS-----------
+
+
+let sliderImages = new Array("/WebSite/Images/slider-image1.JPG", "/WebSite/Images/slider-image2.JPG", "/WebSite/Images/slider-image3.JPG");
+let imageIndex = 0;
+let currentImageIndex = imageIndex;
+let sliderImage = document.querySelector(".slider-image");
+sliderImage.style.backgroundImage = "url(" + sliderImages[imageIndex] + ")";
+
+function setCurrentSlideIndex(currentPosition, newPosition){
+    currentPosition++;
+    newPosition++;
     
+    let currentIndex = document.querySelector(".current-slider-index");
+    let newIndex = document.querySelector(".index-button-" + newPosition);
+
+    currentIndex.classList.remove("current-slider-index");
+    newIndex.classList.add("current-slider-index");
 }
 
-//Functions call
-function website(){
-    burgerToggle();
+function leftSwap(){
+    let currentIndex = imageIndex+1;
+
+    if(imageIndex == 0){
+        imageIndex = sliderImages.length - 1;
+    }else{
+        imageIndex--;
+    }
+
+    sliderImage.style.backgroundImage = "url(" + sliderImages[imageIndex] + ")";
+
+    setCurrentSlideIndex(currentIndex, imageIndex);
 }
 
-website();
+function rightSwap(){
+    let currentIndex = imageIndex+1;
+
+    if(imageIndex == sliderImages.length - 1){
+        imageIndex = 0;
+    }else{
+        imageIndex++;
+    }
+
+    sliderImage.style.backgroundImage = "url(" + sliderImages[imageIndex] + ")";
+
+    setCurrentSlideIndex(currentIndex, imageIndex);
+}
+
+function leftIndexClick(){
+    let currentIndex = imageIndex+1;
+
+    imageIndex = 0;
+    sliderImage.style.backgroundImage = "url(" + sliderImages[imageIndex] + ")";
+
+    setCurrentSlideIndex(currentIndex, imageIndex);
+}
+
+function middleIndexClick(){
+    let currentIndex = imageIndex+1;
+
+    imageIndex = 1;
+    sliderImage.style.backgroundImage = "url(" + sliderImages[imageIndex] + ")";
+
+    setCurrentSlideIndex(currentIndex, imageIndex);
+}
+
+function rightIndexClick(){
+    let currentIndex = imageIndex+1;
+
+    imageIndex = 2;
+    sliderImage.style.backgroundImage = "url(" + sliderImages[imageIndex] + ")";
+
+    setCurrentSlideIndex(currentIndex, imageIndex);
+}
