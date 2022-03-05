@@ -325,4 +325,8 @@ hr{
     .burger{
         display: block;
     }
+
+    .slider-container{
+        height: 280px;
+    }
 }
