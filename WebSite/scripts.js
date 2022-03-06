@@ -117,3 +117,97 @@ function rightIndexClick(){
 
     setCurrentSlideIndex(currentIndex, imageIndex);
 }
+
+//-----------CARD INFORMATION FUNCTIONS-----------
+
+let isExpanded = false;
+let hiddenCard1 = document.querySelector("#hidden1");
+let hiddenCard2 = document.querySelector("#hidden2");
+let hiddenCard3 = document.querySelector("#hidden3");
+let hiddenCard4 = document.querySelector("#hidden4");
+
+function showCards(){
+    let infoCardsButton = document.querySelector("#info-cards-button");
+
+    if(!isExpanded){
+        hiddenCard1.style.display = "block";
+        hiddenCard2.style.display = "block";
+        hiddenCard3.style.display = "block";
+        hiddenCard4.style.display = "block";
+
+        infoCardsButton.innerHTML = "Ocultar";
+        isExpanded = true;
+    } else{
+        hiddenCard1.style.display = "none";
+        hiddenCard2.style.display = "none";
+        hiddenCard3.style.display = "none";
+        hiddenCard4.style.display = "none";
+
+        infoCardsButton.innerHTML = "Expandir";
+        isExpanded = false;
+    }
+}
+
+//-----------SCHEDULE FORM FUNCTIONS-----------
+function getScheduleInfo(){
+    let patientName = document.querySelector("#name");
+    let patientPhone = document.querySelector("#phone");
+    let scheduleDate = document.querySelector("#date");
+    let scheduleHour = document.querySelector("#hour");
+    
+    console.log(patientName.value);
+    console.log(patientPhone.value);
+    console.log(scheduleDate.value);
+    console.log(scheduleHour.value);
+    //Todos los datos son String
+    validatePhone(patientPhone.value);
+    validateName(patientName.value);
+}
+
+function validatePhone(phone){
+    if(phone == ""){
+        alert("Llena todos los campos");
+        return false;
+    }
+
+    let phoneRegex = /^\d{10}$/;
+
+    if(phoneRegex.test(phone)){
+        return true;
+    }else{
+        alert("El teléfono debe tener 10 dígitos, código internacional México");
+        return false;
+    }
+}
+
+function validateName(name){
+    if(name == ""){
+        alert("Llena todos los campos");
+        return false;
+    }
+
+    let nameRegex = /^[a-zA-Z\s]*$/;
+
+    if(nameRegex.test(name)){
+        return true;
+    }else{
+        alert("El nombre solo puede contener letras y espacios");
+        return false;
+    }
+}
+
+function validateDate(date){
+    if(date == ""){
+        alert("Llena todos los campos");
+        return false;
+    }
+    
+    let dateRegex = /^\d{4}-\d{2}-\d{2}$/;
+
+    if(dateRegex.test(date)){
+        
+    }else{
+        alert("La fecha debe tener el formato AAAA-MM-DD");
+        return false;
+    }
+}

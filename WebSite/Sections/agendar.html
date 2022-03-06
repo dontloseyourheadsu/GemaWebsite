@@ -11,7 +11,7 @@
 </head>
 <body>
     <header>
-        <a href=""><img class="logo-image" src="/WebSite/Images/logo.png" alt="Instituto Integral de la Mujer Logo"></a>
+        <a href="/Website/Sections/index.html"><img class="logo-image" src="/WebSite/Images/logo.png" alt="Instituto Integral de la Mujer Logo"></a>
         <nav>
             <ul class="nav-links responsive-nav-menu-off">
                 <li class="nav-link">
@@ -30,5 +30,76 @@
             <div class="line-3"></div>
         </div>
     </header>
+
+    <main>
+        <section>
+            <div class="title-container">
+                <h2 class="title">Agendar</h2>
+            </div>
+            <div class="table-container">
+                <img src="/WebSite/Images/schedule-table.jpg" alt="Horarios">
+            </div>
+
+            <form class="form-container">
+                <div class="form-mini-container">
+                    <div class="form-input-container">
+                        <label for="name">Nombre de la paciente:</label>
+                        <input class="form-input" type="text" id="name" name="name" placeholder="Nombre Completo">
+                    </div>
+                    <div class="form-input-container">
+                        <label for="phone">Número de celular:</label>
+                        <input class="form-input" type="text" id="phone" name="phone" placeholder="Número de celular">
+                    </div>
+                </div>
+                <div class="form-mini-container">
+                    <div class="form-input-container">
+                        <label for="date">Fecha a solicitar:</label>
+                        <input class="form-input" type="date" id="date" name="date">
+                    </div>
+                    <div class="form-input-container">
+                        <label for="hour">Horario a solicitar:</label>
+                        <input class="form-input" type="time" id="hour" name="hour">
+                    </div>
+                </div>
+            </form>
+
+            <div class="normal-button-container">
+                <button onclick="getScheduleInfo()" class="normal-button">Agendar</button>
+            </div>
+        </section>
+
+        <hr>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div>
+                <div>
+                    <h3>Ubicación</h3>
+                    <p class="footer-text">Av. Independencia 253</p>
+                    <p class="footer-text">Col. Chapultepec Puebla, Pue.</p>
+                </div>
+                <div>
+                    <h3>Contacto</h3>
+                    <div class="footer-contacto-align">
+                        <img class="whatsapp-logo" src="/WebSite/Images/whatsapp-icon.svg" alt="whatsapp-icon">
+                        <p class="footer-text">+52 222 238-5056</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <h3>Horarios</h3>
+                    <p class="footer-text">Lunes - Viernes</p>
+                    <div>
+                        <p class="footer-text">10am - 13pm</p>
+                        <p class="footer-text">17pm - 19pm</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
 </body>
+<script src="/WebSite/scripts.js"></script>
 </html>

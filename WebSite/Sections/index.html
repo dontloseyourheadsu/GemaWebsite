@@ -13,7 +13,7 @@
 <body>
 
     <header>
-        <a href=""><img class="logo-image" src="/WebSite/Images/logo.png" alt="Instituto Integral de la Mujer Logo"></a>
+        <a href="/Website/Sections/index.html"><img class="logo-image" src="/WebSite/Images/logo.png" alt="Instituto Integral de la Mujer Logo"></a>
         <nav>
             <ul class="nav-links responsive-nav-menu-off">
                 <li class="nav-link">
@@ -21,7 +21,7 @@
                     <div class="animated-sites-underline"></div>
                 </li>
                 <li class="nav-link">
-                    <a href="#ubicacion.html">Ubicación</a>
+                    <a href="#ubicacion">Ubicación</a>
                     <div class="animated-sites-underline"></div>
                 </li>
                 <li class="nav-link">
@@ -56,27 +56,95 @@
                 <div class="slider-image"></div>
             </div>
         </section>
+<!--
+    <hr>
 
-        <hr>
-
-        <section>
-            <div class="dr-div">
-                <div class="dr-image-card">
-                    <img class="dr-image" src="" alt="Dra. Gema Sombrerero">
-                </div>
-                <div class="dr-information">
-                    <p class="dr-name">Dra. Gema Sombrerero Juárez</p>
-                    <p> Diploma Medicina: BUAP</p>
-                    <p>Diploma Ginecología: BUAP</p>
-                </div>
+    <section>
+        <div class="dr-div">
+            <div class="dr-image-card">
+                <img class="dr-image" src="" alt="Dra. Gema Sombrerero">
             </div>
-        </section>
+            <div class="dr-information">
+                <p class="dr-name">Dra. Gema Sombrerero Juárez</p>
+                <p> Diploma Medicina: BUAP</p>
+                <p>Diploma Ginecología: BUAP</p>
+            </div>
+        </div>
+    </section>
+-->
 
         <hr>
 
         <section>
             <div class="title-container">
                 <h2 class="title">Tipos de Consultas</h2>
+            </div>
+
+            <div class="info-cards-container">
+                <div class="info-card-container">
+                    <div class="info-card">
+                        <h4 class="info-card-text">Consulta de Ginecología</h4>
+                        <ul class="cards-listing">
+                            <li>Infecciones genito-urinarias</li>
+                            <li>Hemorragia uterina anormal</li>
+                            <li>Alteraciones de la menstruación</li>
+                            <li>Climaterio y menopausia</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="info-card-container">
+                    <div class="info-card">
+                        <h4 class="info-card-text">Consulta de Obstetricia</h4>
+                        <ul class="cards-listing">
+                            <li>Control de Embarazo (Revisión con ultrasonido)</li>
+                            <li>Atención de parto y operación cesárea</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="info-card-container">
+                    <div class="info-card">
+                        <h4 class="info-card-text">Consulta de Colposcopia</h4>
+                        <ul class="cards-listing">
+                            <li>Papanicolaou</li>
+                            <li>Estudio de colposcopia</li>
+                            <li>Toma de biopsia</li>
+                            <li>Tratamiento de infección por virus de papiloma humano</li>
+                            <li>Vacuna para virus de papiloma humano</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="info-card-container">
+                    <div class="info-card">
+                        <h4 class="info-card-text">Consulta de Reproducción Humana</h4>
+                        <ul class="cards-listing">
+                            <li>Esterilidad</li>
+                            <li>Tratamientos de baja complejidad</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!--
+                <div class="normal-button-container">
+                    <button id="info-cards-button" onclick="showCards()" class="normal-button">Expandir</button>
+                </div>
+            -->
+        </section>
+
+        <hr>
+
+        <section id="ubicacion">
+            <div class="title-container">
+                <h2 class="title">Ubicación</h2>
+            </div>
+            <div class="map-container">
+                <iframe
+                    width="450"
+                    height="400"
+                    style="border:0"
+                    allowfullscreen
+                    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyADaXko3dI9c34SynTErCbBwjFLzQJ-BVo&q=Fed Puebla - Amozoc o C. independencia 253">
+                </iframe>
             </div>
         </section>
 
@@ -89,7 +157,7 @@
                 <div>
                     <h3>Ubicación</h3>
                     <p class="footer-text">Av. Independencia 253</p>
-                    <p class="footer-text">Col. Chapultepec Puebla,Pue.</p>
+                    <p class="footer-text">Col. Chapultepec Puebla, Pue.</p>
                 </div>
                 <div>
                     <h3>Contacto</h3>
@@ -114,5 +182,6 @@
 </body>
 
 <script src="/WebSite/scripts.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaewicvigtP9xPv919E-RNoxfvC-Hqik&callback=showMap"></script>
 
 </html>
