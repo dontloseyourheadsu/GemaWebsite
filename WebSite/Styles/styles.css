@@ -71,6 +71,17 @@ hr{
     border-bottom: 6px solid var(--backgroundcolor-high-pink);
 }
 
+.title-description-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-description-container > p{
+    margin: .2em 0;
+}
+
 .normal-button-container{
     display: flex;
     justify-content: flex-end;
@@ -514,5 +525,9 @@ p.info-card-text{
 
     .table-container > img{
         width:95%;
+    }
+
+    .form-container{
+        justify-content: flex-start;
     }
 }

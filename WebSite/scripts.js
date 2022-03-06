@@ -155,18 +155,15 @@ function getScheduleInfo(){
     let scheduleDate = document.querySelector("#date");
     let scheduleHour = document.querySelector("#hour");
     
-    console.log(patientName.value);
-    console.log(patientPhone.value);
-    console.log(scheduleDate.value);
-    console.log(scheduleHour.value);
-    //Todos los datos son String
-    validatePhone(patientPhone.value);
-    validateName(patientName.value);
+    if(validateName(patientName.value) && validatePhone(patientPhone.value)
+    && validateDate(scheduleDate.value) && validateHour(scheduleHour.value)){
+        alert("Se ha enviado la cita, si necesitas cancelar marca a +52 222 238-5056");
+    }
 }
 
 function validatePhone(phone){
     if(phone == ""){
-        alert("Llena todos los campos");
+        alert("Llena el teléfono");
         return false;
     }
 
@@ -182,7 +179,7 @@ function validatePhone(phone){
 
 function validateName(name){
     if(name == ""){
-        alert("Llena todos los campos");
+        alert("Llena el nombre");
         return false;
     }
 
@@ -198,16 +195,63 @@ function validateName(name){
 
 function validateDate(date){
     if(date == ""){
-        alert("Llena todos los campos");
+        alert("Llena la fecha");
         return false;
     }
-    
-    let dateRegex = /^\d{4}-\d{2}-\d{2}$/;
 
-    if(dateRegex.test(date)){
-        
-    }else{
-        alert("La fecha debe tener el formato AAAA-MM-DD");
+    //get day of the week with date
+    let dayOfTheWeek = new Date(date).getDay();
+    console.log(dayOfTheWeek);
+
+    if(dayOfTheWeek == 5 || dayOfTheWeek == 6){
+        alert("No se puede agendar en días sábados ni domingos");
         return false;
     }
+
+    //array has day, month and year in that order
+    let dateArray = date.split("-");
+    dateArray.reverse();
+
+    dateArray = dateArray.map(function(item){
+        return parseInt(item);
+    });
+
+    let today = new Date();
+    let todayArray = [today.getDate(), today.getMonth()+1, today.getFullYear()];
+
+    if((dateArray[0] < todayArray[0]) || (dateArray[1] < todayArray[1]) || (dateArray[2] < todayArray[2])){
+        alert("La fecha debe ser de hoy en adelante");
+        return false;
+    }else{
+        return true;
+    }
+}
+
+function validateHour(hour){
+    if(hour == ""){
+        alert("Llena la hora");
+        return false;
+    }
+
+    let hourArray = hour.split(":");
+
+    hourArray = hourArray.map(function(item){
+        return parseInt(item);
+    });
+
+    if(hourArray[1] != 0){
+        alert("La hora debe ser de 24 horas, minutos debe ser 0");
+        return false;
+    }
+
+    if((hourArray[0] >= 10 && hourArray[0] <= 13) || (hourArray[0] >= 17 && hourArray[0] <= 19)){
+        return true;
+    }else{
+        alert("La hora debe ser de 10am a 1pm o de 5pm a 7pm");
+        return false;
+    }
+}
+
+function schedule(){
+    
 }
