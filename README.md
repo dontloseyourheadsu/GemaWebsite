@@ -21,4 +21,5 @@ The normalizer.css file is a library like resources used to normalize the styles
 The script of google api is used to control the embedded google maps at the id="#ubicacion" sections at index.html. Next, the scripts.js is a local file that controls for the following: Controller for the burger animation when the screen is less than 580px. It displays the unordered list of the navbar for the user to keep navigating in smalleer screens; Controller for the image slider that calls the images and passes them to the display. It also controls the buttons to switch image and the index buttons to access an image quicker; Controls for a section also hided by petition of the client to show more cards about their service; And controllers for scheduling in agendar.html which manages inputing wrong information with alerts and sends the information once the information is correct through an API for scheduling.
 
 ## Link to the Website
+
 atencionintegraldelamujer.netlify.app
